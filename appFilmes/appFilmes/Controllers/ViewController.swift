@@ -12,8 +12,6 @@ import AlamofireImage
 
 class ViewController: UIViewController {
     
-    var apiService = ApiService()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -46,10 +44,10 @@ class ViewController: UIViewController {
                 
                 guard let titulo = resultado[0].title else { return }
                 print(resultado)
-                for filme in resultado {
-                    
+//                for filme in resultado {
+//
 //                    guard let id = filme.id else { return }
-                }
+//                }
                 
                 // Back to the main thread
 //                DispatchQueue.main.async {

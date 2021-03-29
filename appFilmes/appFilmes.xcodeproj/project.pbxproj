@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,7 +18,6 @@
 		FC124F722612491B00A1FE84 /* appFilmesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC124F712612491B00A1FE84 /* appFilmesTests.swift */; };
 		FC124F7D2612491B00A1FE84 /* appFilmesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC124F7C2612491B00A1FE84 /* appFilmesUITests.swift */; };
 		FC124F8B261249BE00A1FE84 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC124F8A261249BE00A1FE84 /* Model.swift */; };
-		FC124F8D26124A0200A1FE84 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC124F8C26124A0200A1FE84 /* ApiService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +61,6 @@
 		FC124F7C2612491B00A1FE84 /* appFilmesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appFilmesUITests.swift; sourceTree = "<group>"; };
 		FC124F7E2612491B00A1FE84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC124F8A261249BE00A1FE84 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		FC124F8C26124A0200A1FE84 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +111,6 @@
 				80E2383C3E0C2F1CC0BF2BA7 /* Pods-appFilmesTests.debug.xcconfig */,
 				EF9CBB1B94FD5069D2C14BC3 /* Pods-appFilmesTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -142,14 +139,13 @@
 		FC124F5B2612491B00A1FE84 /* appFilmes */ = {
 			isa = PBXGroup;
 			children = (
+				FC124F8E261263A700A1FE84 /* Models */,
+				FC124F8F261263B500A1FE84 /* Views */,
+				FC124F90261263BC00A1FE84 /* Controllers */,
 				FC124F5C2612491B00A1FE84 /* AppDelegate.swift */,
-				FC124F5E2612491B00A1FE84 /* ViewController.swift */,
-				FC124F602612491B00A1FE84 /* Main.storyboard */,
 				FC124F632612491B00A1FE84 /* Assets.xcassets */,
 				FC124F652612491B00A1FE84 /* LaunchScreen.storyboard */,
 				FC124F682612491B00A1FE84 /* Info.plist */,
-				FC124F8A261249BE00A1FE84 /* Model.swift */,
-				FC124F8C26124A0200A1FE84 /* ApiService.swift */,
 			);
 			path = appFilmes;
 			sourceTree = "<group>";
@@ -170,6 +166,30 @@
 				FC124F7E2612491B00A1FE84 /* Info.plist */,
 			);
 			path = appFilmesUITests;
+			sourceTree = "<group>";
+		};
+		FC124F8E261263A700A1FE84 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FC124F8A261249BE00A1FE84 /* Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FC124F8F261263B500A1FE84 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FC124F602612491B00A1FE84 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FC124F90261263BC00A1FE84 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC124F5E2612491B00A1FE84 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,7 +433,6 @@
 			files = (
 				FC124F8B261249BE00A1FE84 /* Model.swift in Sources */,
 				FC124F5F2612491B00A1FE84 /* ViewController.swift in Sources */,
-				FC124F8D26124A0200A1FE84 /* ApiService.swift in Sources */,
 				FC124F5D2612491B00A1FE84 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
