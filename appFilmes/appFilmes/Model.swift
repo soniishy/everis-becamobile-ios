@@ -4,6 +4,8 @@
 //   let welcome = try? newJSONDecoder().decode(Welcome.self, from: jsonData)
 
 import Foundation
+import Alamofire
+import AlamofireImage
 
 // MARK: - Welcome
 struct Welcome: Codable {

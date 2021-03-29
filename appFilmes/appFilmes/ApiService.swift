@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import Alamofire
+import AlamofireImage
 
 class ApiService {
     
