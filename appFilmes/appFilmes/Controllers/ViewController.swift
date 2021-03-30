@@ -64,7 +64,7 @@ enum OriginalLanguage: String, Codable {
     case ru = "ru"
 }
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -72,6 +72,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.dataSource = self
         requisicaoFilmes()
     }
     
