@@ -137,4 +137,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone ? 420 : 820
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let filmeAtual = listaDeFilmes[indexPath.row]
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "detalhes") as! DetalhesViewController
+        controller.filmeSelecionado = filmeAtual
+        self.present(controller, animated: true, completion: nil)
+    }
 }

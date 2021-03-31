@@ -19,6 +19,8 @@
 		FC124F7D2612491B00A1FE84 /* appFilmesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC124F7C2612491B00A1FE84 /* appFilmesUITests.swift */; };
 		FC124F8B261249BE00A1FE84 /* Filme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC124F8A261249BE00A1FE84 /* Filme.swift */; };
 		FCFAA81F2613BFB30086A9AB /* CatalogoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFAA81E2613BFB30086A9AB /* CatalogoTableViewCell.swift */; };
+		FCFAA82726141D1B0086A9AB /* DetalhesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFAA82626141D1B0086A9AB /* DetalhesViewController.swift */; };
+		FCFAA829261433490086A9AB /* Detalhe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFAA828261433490086A9AB /* Detalhe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		FC124F7E2612491B00A1FE84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC124F8A261249BE00A1FE84 /* Filme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filme.swift; sourceTree = "<group>"; };
 		FCFAA81E2613BFB30086A9AB /* CatalogoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogoTableViewCell.swift; sourceTree = "<group>"; };
+		FCFAA82626141D1B0086A9AB /* DetalhesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesViewController.swift; sourceTree = "<group>"; };
+		FCFAA828261433490086A9AB /* Detalhe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detalhe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				FC124F8A261249BE00A1FE84 /* Filme.swift */,
+				FCFAA828261433490086A9AB /* Detalhe.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -191,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				FC124F5E2612491B00A1FE84 /* ViewController.swift */,
+				FCFAA82626141D1B0086A9AB /* DetalhesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -434,10 +440,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCFAA82726141D1B0086A9AB /* DetalhesViewController.swift in Sources */,
 				FC124F8B261249BE00A1FE84 /* Filme.swift in Sources */,
 				FC124F5F2612491B00A1FE84 /* ViewController.swift in Sources */,
 				FC124F5D2612491B00A1FE84 /* AppDelegate.swift in Sources */,
 				FCFAA81F2613BFB30086A9AB /* CatalogoTableViewCell.swift in Sources */,
+				FCFAA829261433490086A9AB /* Detalhe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
