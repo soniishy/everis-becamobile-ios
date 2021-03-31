@@ -189,7 +189,7 @@ class DetalhesViewController: UIViewController {
                     let caminhoPosterPath = "https://image.tmdb.org/t/p/w500\(posterPath)"
                 let detalheDoFilme = Detalhe(title: nomeDoFilme, voteAverage: notaDoFilme, posterPath: caminhoPosterPath, id: idDoFilme, overview: sinopse)
 
-                print(detalhesFilme.title)
+//                print(detalhesFilme.title)
                 //                print(self.listaDeFilmes)
                 completion(detalheDoFilme)
                 
