@@ -64,7 +64,7 @@ enum OriginalLanguage: String, Codable {
     case ru = "ru"
 }
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -73,12 +73,13 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
+        self.tableView.delegate = self
         requisicaoFilmes()
     }
     
     func requisicaoFilmes() {
         makeRequest { (listaDeFilmes) in
-            print(self.listaDeFilmes[0].title)
+//            print(self.listaDeFilmes[0].title)
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -98,10 +99,12 @@ class ViewController: UIViewController, UITableViewDataSource {
                 
                 for filme in resultado {
                     let nomeDoFilme = filme.title
+                    let notaDoFilme = filme.voteAverage
                     let idDoFilme = filme.id
                     let posterPath = filme.posterPath
+                    let sinopse = filme.overview
                     let caminhoPosterPath = "https://image.tmdb.org/t/p/w500\(posterPath)"
-                    let filmeAtual = Filme(title: nomeDoFilme, posterPath: caminhoPosterPath, id: idDoFilme)
+                    let filmeAtual = Filme(title: nomeDoFilme, voteAverage: notaDoFilme, posterPath: caminhoPosterPath, id: idDoFilme, overview: sinopse)
                     
                     self.listaDeFilmes.append(filmeAtual)
                 }
@@ -123,10 +126,15 @@ class ViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celula = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CatalogoTableViewCell
         let filmeAtual = listaDeFilmes[indexPath.row]
-        print(filmeAtual.title)
-        
         celula.mostraImagem(filme: filmeAtual)
+        celula.imagemPoster.layer.cornerRadius = 10
+        celula.imagemPoster.layer.masksToBounds = true
+//        print(filmeAtual.title)
         
         return celula
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone ? 420 : 820
     }
 }
